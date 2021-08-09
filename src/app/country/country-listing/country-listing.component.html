@@ -1,0 +1,25 @@
+<div class="container mt-5 text-center">
+    <h2 class="m-5">Countries</h2>
+    <table class="table table-hover p-2 text-center">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Country Name</th>
+                <th>Edit</th>
+                <th>Delete</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr  *ngFor="let country of countries">
+                <td>{{country.id}}</td>
+                <td (click)="onSelectCountry(country.id)">{{country.name}}</td>
+                <td (click)="onEditCountry(country.id)" ><img style="cursor: pointer;" src="../../../assets/images/icons8-edit-25.png" alt=""></td>
+                <td (click)="onDeleteCountry(country.id)" ><img style="cursor: pointer;" src="../../../assets/images/icons8-trash-25.png" alt=""></td>
+            </tr>
+        </tbody>
+    </table>
+
+
+    <button routerLink="/addCountry" style="margin :20px 0 ;width:12rem;border-radius:10px" class="btn btn-primary" type="submit">Add Country</button>
+
+  </div>

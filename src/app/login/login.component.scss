@@ -1,0 +1,25 @@
+
+.container{
+    display: flex;
+    height:100vh;
+    overflow-y: hidden;
+    background-color:white;
+    input{
+       outline: none;
+       background-color: #EDE7F6;
+       padding: 1rem 3.5rem;
+       border-radius: 10px;
+       border: none;
+       margin-bottom: 1.5rem;
+   }
+   ::placeholder{
+       color: #546e88 !important;
+       font-weight: bold;
+       
+   }
+ 
+  
+}
+.container--form{
+    padding: 25vh 0px ;
+}

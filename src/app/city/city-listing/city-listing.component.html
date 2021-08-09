@@ -1,0 +1,26 @@
+<div class="container mt-5 text-center">
+    <h2 class="m-5">{{countryName}}</h2>
+    <table class="table table-hover p-2 text-center">
+        <thead>
+            <tr>
+                <th>Country ID</th>
+                <th>City ID</th>
+                <th>City Name</th>
+                <th>Edit</th>
+                <th>Delete</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr  *ngFor="let city of cities">
+                <td>{{city.countryId}}</td>
+                <td>{{city.id}}</td>
+                <td>{{city.name}}</td>
+                <td (click)="onEditCity(city.id)"  ><img style="cursor: pointer;" src="../../../assets/images/icons8-edit-25.png" alt=""></td>
+                <td (click)="onDeleteCity(city.id)" ><img style="cursor: pointer;" src="../../../assets/images/icons8-trash-25.png" alt=""></td>
+            </tr>
+        </tbody>
+    </table>
+
+    <button (click)="onAddCity()" style="margin :20px 0 ;width:12rem;border-radius:10px" class="btn btn-primary" type="submit">Add City</button>
+
+  </div>

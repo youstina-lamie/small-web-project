@@ -1,0 +1,31 @@
+<div class="container">
+    <div class="row">
+        <div class="container--form col-lg-4" >
+            
+            <h1  style="font-weight: bold;font-size:2rem">Log in to your account</h1>
+            
+
+            <form [formGroup]="form"  (submit)="onSignIn(form.value)" class="needs-validation" novalidate>
+                <div class="form-group position-relative" >
+                    <img class="position-absolute" style="left:.2rem;top:.3rem" src="assets/images/icons8-male-user-40.png" alt="">
+                    <input formControlName="Email" id="email" type="email"  class="form-control" name="email"  required placeholder="Email Address or Username" >
+                    <div class="valid-feedback">
+                        Looks good!
+                    </div>
+                </div>
+                <div class="form-group" style="position: relative;margin-bottom:30px">
+                    <img style="position: absolute; left:.8rem;top:1.2rem" src="assets/images/icons8-password-25.png" alt="">
+                    <input formControlName="Password" id="password" type="password"  class="form-control" placeholder="Password" name="password" required >
+                    <div class="valid-feedback">
+                        Looks good!
+                    </div>
+                </div>
+                <h6  style="font-weight: bold;font-size:1.5rem">Forget password or having trouble logging in?</h6>                   
+                <button style="margin :20px 0 ;width:12rem;border-radius:10px" class="btn btn-primary" type="submit" [disabled]="form.invalid">Sign In</button>
+            </form>
+        </div>
+        <div class="container--img col-lg-8 "  >
+            <img style="width: 100%;" src="assets/images/login.png" alt="">
+        </div>
+    </div>
+</div>
